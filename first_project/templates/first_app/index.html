@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -6,16 +7,15 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>First App</title>
+        <title>Django Guitar Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="{% static 'css/mystyle.css'  %}">
     </head>
     <body>
-        <h1>Hello this is index.html!</h1>
+        <h1>Hi, this is a picture of Django himself</h1>
 
-        {{ insert_me }}
+        <img src=" {% static 'images/Djangas.jpg'   %} " alt="Opps">
         
-        <script src="" async defer></script>
     </body>
 </html>
