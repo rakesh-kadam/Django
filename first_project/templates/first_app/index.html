@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
+
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -7,15 +8,35 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Django Guitar Page</title>
+        <title>Dgango Level 2</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static 'css/mystyle.css'  %}">
+        <link rel="stylesheet" href="{% static 'css/mystyle.css'  %}"/>
     </head>
     <body>
-        <h1>Hi, this is a picture of Django himself!</h1>
+        <h1> Hi welcom to my site</h1>
 
-        <img src=" {% static 'images/Djangas.jpg'   %} " alt="Opps">
+        <div class="djangotwo">
+            {% if access_records %}
+                <table>
+                    <thead>
+                        <th>Site Name</th>
+                        <th>Date Accessed</th>
+                    </thead>
+                    {% for acc in access_records %}
+                    <tr>
+                        <td>{{ acc.name }}</td>
+                        <td>{{ acc.date }}</td>
+                    </tr>
+
+                    {% endfor %}
+                    
+                </table>
+            {% else %}
+                <p>no data</p>
+            {% endif %}
+        </div>
         
+        <script src="" async defer></script>
     </body>
 </html>
