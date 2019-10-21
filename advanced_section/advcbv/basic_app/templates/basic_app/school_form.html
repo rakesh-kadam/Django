@@ -1,4 +1,4 @@
-{% extends "basic-app/basic_app_base.html" %}
+{% extends "basic_app/basic_app_base.html" %}
 
 {% block body_block %}
 
@@ -12,7 +12,7 @@
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" class="btn btn-primary" value="submit"
+        <input type="submit" class="btn btn-primary" value="submit">
 
     </form>
-{% endblock }
+{% endblock %}
